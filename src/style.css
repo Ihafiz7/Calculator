@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.App{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#clear{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    text-align: center;
+    cursor: pointer; 
+}
+
+  
+#display {
+    grid-column: span 4;
+    background-color: #f0f0f0;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: right;
+    overflow: hidden;
+}
+
+button{
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+.row div{
+    flex: 1;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.row div:hover {
+    background-color: #e0e0e0;
+}
+  
+#clear {
+    background-color: rgba(49, 190, 49, 0.87);
+    color: #fff;
+    border-radius: 5px;
+
+}
+  #equals{
+    background-color: rgba(49, 190, 49, 0.87);
+}
+
+#equals:hover{
+    background-color: rgb(82, 131, 9);
+}
+  
+#clear:hover {
+    background-color: rgb(82, 131, 9);
+}
+  
+#equals {
+    grid-column: span 2;
+}
+#zero{
+    grid-column: span 3;
+}
+  
+#decimal, #add, #subtract, #multiply, #divide {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+}
+  
+#decimal:hover, #add:hover, #subtract:hover, #multiply:hover, #divide:hover {
+    background-color: #2980b9;
+}
